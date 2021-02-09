@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+@import './_variables';
+@import './flex';
+@import './page-enter_screen.scss';
+@import './pages-sign_up.scss';
+@import './page-sign_in.scss';
+
+body {
+  background: $c_background;
+  color: $c_white;
+
+  * {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+  .no-outline {
+    outline: none;
+  }
+
+  p {
+    color: rgba(62, 68, 98, 1);
+  }
+
+  h1 {
+    color: rgba(24, 28, 67, 1);
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 800;
+  }
+
+  .row {
+    background: $c_white;
+
+    input {
+      background: $c_input_background;
+    }
+
+    button {
+      background: $c_btn_background;
+      color: $c_white;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+  }
+
+  .header {
+    p {
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    & p:nth-of-type(1) {
+      margin-top: 35px;
+    }
+
+    & a p:nth-child(n) {
+      margin-top: 5px;
+    }
+
+    .watching {
+      position: relative;
+      bottom: 28px;
+      left: 195px;
+    }
+  }
+}
