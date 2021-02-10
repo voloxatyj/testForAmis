@@ -1,0 +1,44 @@
+.sign-up {
+  height: 440px;
+  transition: all 0.1s ease-out;
+
+  img:nth-of-type(odd) {
+    position: absolute;
+    bottom: 50.5vh;
+    left: 41vh;
+  }
+
+  & img.not-pass {
+    bottom: 50.8vh;
+  }
+
+  img:nth-of-type(even) {
+    position: absolute;
+    bottom: 36.5vh;
+    left: 41vh;
+  }
+
+  & img.not-confirm {
+    bottom: 36.8vh;
+  }
+
+  small {
+    position: absolute;
+    font-size: 10px;
+    padding-left: 38px;
+    color: rgba(255, 102, 131, 1);
+
+    &.full-name {
+      top: 145px;
+    }
+    &.email {
+      top: 232px;
+    }
+    &.password {
+      bottom: 297px;
+    }
+    &.confirm-password {
+      bottom: 209px;
+    }
+  }
+}

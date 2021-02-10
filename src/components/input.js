@@ -5,8 +5,18 @@ export const Input = styled.input`
   height: 36px;
   padding: 0 15px;
   border-radius: 50px;
-  border: none;
+  margin-top: 5px;
   box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  border: 1px solid
+    ${(props) => {
+      if (!props.value) {
+        return 'transparent';
+      } else if (props.value.length > 1 && !props.about.length) {
+        return 'green';
+      } else {
+        return 'red';
+      }
+    }};
 
   ::placeholder,
   ::-webkit-input-placeholder {
