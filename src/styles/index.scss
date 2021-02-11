@@ -19,13 +19,6 @@ body {
     line-height: 20px;
   }
 
-  .pointer {
-    cursor: pointer;
-  }
-  .no-outline {
-    outline: none;
-  }
-
   p {
     color: rgba(62, 68, 98, 1);
   }
@@ -40,14 +33,11 @@ body {
   .row {
     background: $c_white;
 
-    input {
-      background: $c_input_background;
-    }
-
     button {
       background: $c_btn_background;
       font-weight: 500;
       margin-bottom: 10px;
+      color: rgba(255, 255, 255, 1);
     }
   }
 

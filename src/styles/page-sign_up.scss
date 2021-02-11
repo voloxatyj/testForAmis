@@ -2,7 +2,19 @@
   height: 440px;
   transition: all 0.1s ease-out;
 
-  img:nth-of-type(odd) {
+  #helper {
+    width: 15px;
+    bottom: 57vh;
+    opacity: 0.2;
+    left: 41.4vh;
+  }
+
+  #helper-info {
+    bottom: 52vh;
+    left: 10.5vh;
+  }
+
+  .eye-pass {
     position: absolute;
     bottom: 50.5vh;
     left: 41vh;
@@ -12,7 +24,7 @@
     bottom: 50.8vh;
   }
 
-  img:nth-of-type(even) {
+  .eye-confirm {
     position: absolute;
     bottom: 36.5vh;
     left: 41vh;

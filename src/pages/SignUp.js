@@ -1,20 +1,27 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+// Components
 import { Button } from '../components/button';
 import { Input } from '../components/input';
 import { Label } from '../components/label';
+// SVG Icons
 import eye from '../styles/icons/eye.svg';
 import not_eye from '../styles/icons/not_eye.svg';
+import question from '../styles/icons/question.svg';
+import helper from '../styles/icons/helper.svg';
 
 export const SignUp = () => {
   const [show_pass, setShow_pass] = useState(false);
   const [show_confirm, setShow_confirm] = useState(false);
+  const [show_helper, setShow_helper] = useState(false);
+
   const [info, setInfo] = useState({
     fullName: '',
     email: '',
     password: '',
     confirmPassword: '',
   });
+
   const [errors, setErrors] = useState({
     fullName: '',
     email: '',
@@ -108,9 +115,11 @@ export const SignUp = () => {
       Object.values(errors).every((item) => item === '') &&
       Object.values(info).every((item) => item.length > 3)
     ) {
-      localStorage.setItem('user', info.fullName);
+      localStorage.setItem(`${info.email}`, JSON.stringify(info));
     }
   };
+
+  const helperMsg = () => setShow_helper((prev) => !prev);
 
   return (
     <div className="header flex column ai_c">
@@ -127,6 +136,7 @@ export const SignUp = () => {
           value={info.fullName}
           onChange={changeInfo}
           about={errors.fullName}
+          className="sign-up"
         />
         {errors.fullName && (
           <small className="full-name">{errors.fullName}</small>
@@ -142,22 +152,26 @@ export const SignUp = () => {
           value={info.email}
           onChange={changeInfo}
           about={errors.email}
+          className="sign-up"
         />
         {errors.email && <small className="email">{errors.email}</small>}
+        {show_helper && <img src={helper} id="helper-info" alt="info" />}
+        <img src={question} id="helper" alt="question" onClick={helperMsg} />
         <Label htmlFor="password" className="row">
           Password
         </Label>
         <Input
           id="password"
           type={show_pass ? 'text' : 'password'}
-          name="password"
           onChange={changeInfo}
+          name="password"
           value={info.password}
           about={errors.password}
+          className="sign-up"
         />
         <img
           onClick={showPassword}
-          className={show_pass ? 'not-pass' : ''}
+          className={show_pass ? 'not-pass' : 'eye-pass'}
           src={show_pass ? not_eye : eye}
           alt="eye"
         />
@@ -174,10 +188,11 @@ export const SignUp = () => {
           name="confirmPassword"
           value={info.confirmPassword}
           about={errors.confirmPassword}
+          className="sign-up"
         />
         <img
           onClick={showPassword}
-          className={show_confirm ? 'not-confirm' : ''}
+          className={show_confirm ? 'not-confirm' : 'eye-confirm'}
           src={show_confirm ? not_eye : eye}
           alt="not_eye"
         />
@@ -192,7 +207,7 @@ export const SignUp = () => {
             !Object.values(info).every((item) => item.length > 3)
           }
         >
-          <Link to="/main">Sign Up</Link>
+          Sign Up
         </Button>
       </form>
       <p>Already have an account?</p>
