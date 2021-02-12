@@ -5,10 +5,19 @@
 @import './page-enter_screen.scss';
 @import './page-sign_up.scss';
 @import './page-sign_in.scss';
+@import './page-main.scss';
 
 body {
   background: $c_background;
   color: $c_white;
+  border: 15px solid $c_white;
+  width: 302px;
+  height: 655px;
+  overflow: hidden;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 
   * {
     font-family: 'Inter', sans-serif;
@@ -60,5 +69,9 @@ body {
   .container {
     width: 275px;
     border-radius: 40px;
+  }
+
+  .input-wrapper {
+    position: relative;
   }
 }

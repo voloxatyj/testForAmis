@@ -2,55 +2,44 @@
   height: 440px;
   transition: all 0.1s ease-out;
 
-  #helper {
-    width: 15px;
-    bottom: 57vh;
-    opacity: 0.2;
-    left: 41.4vh;
-  }
-
-  #helper-info {
-    bottom: 52vh;
-    left: 10.5vh;
-  }
-
-  .eye-pass {
+  .input-helper-info {
     position: absolute;
-    bottom: 50.5vh;
-    left: 41vh;
+    bottom: 4vh;
+    width: 108%;
+
+    .helper {
+      opacity: 0.2;
+      width: 15px;
+    }
+
+    .helper-info {
+      position: absolute;
+      top: -10vh;
+    }
   }
 
-  & img.not-pass {
-    bottom: 50.8vh;
-  }
-
+  .eye-pass,
   .eye-confirm {
-    position: absolute;
-    bottom: 36.5vh;
-    left: 41vh;
-  }
-
-  & img.not-confirm {
-    bottom: 36.8vh;
+    padding-right: 10px;
   }
 
   small {
     position: absolute;
     font-size: 10px;
-    padding-left: 38px;
+    left: 11vh;
     color: rgba(255, 102, 131, 1);
 
     &.full-name {
-      top: 145px;
+      top: 21vh;
     }
     &.email {
-      top: 232px;
+      top: 33vh;
     }
     &.password {
-      bottom: 297px;
+      top: 45vh;
     }
     &.confirm-password {
-      bottom: 209px;
+      top: 57vh;
     }
   }
 }

@@ -2,9 +2,8 @@
   height: 270px;
   transition: all 0.1s ease-out;
 
-  img {
-    position: absolute;
-    bottom: 64vh;
-    left: 41vh;
+  .eye-pass,
+  .eye-confirm {
+    padding-right: 10px;
   }
 }

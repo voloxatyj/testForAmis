@@ -5,6 +5,9 @@ export const Label = styled.label`
   font-weight: 600;
   font-size: 12px;
   padding: 0 15px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0px;
+
+  &.label {
+    position: absolute;
+    bottom: 4vh;
+  }
 `;
