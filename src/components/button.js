@@ -6,6 +6,7 @@ export const Button = styled.button`
   border-radius: 50px;
   border: none;
   opacity: ${(props) => (props.disabled ? '0.4' : '1')};
+  cursor: pointer;
 }
 
   &:focus {

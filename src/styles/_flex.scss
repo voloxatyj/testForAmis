@@ -1,25 +1,23 @@
 .flex {
   display: flex;
 }
-
 .inline {
   display: inline-flex;
 }
-
 .row {
   display: grid;
 }
-
 .wrap {
   flex-wrap: wrap;
 }
-
 .no-wrap {
   flex-wrap: wrap;
 }
-
 .column {
   flex-direction: column;
+}
+.pointer {
+  cursor: pointer;
 }
 
 .jc {
